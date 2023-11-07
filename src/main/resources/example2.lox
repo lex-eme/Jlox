@@ -1,0 +1,24 @@
+fun makeChrono() {
+    var startTime = clock();
+
+    fun timeElapsed() {
+        return clock() - startTime;
+    }
+
+    return timeElapsed;
+}
+
+var c1 = makeChrono();
+
+for(var i = 0; i < 1000; i = i + 1) {
+    print i;
+}
+
+var c2 = makeChrono();
+
+for(var i = 0; i < 1000; i = i + 1) {
+    print i;
+}
+
+print c1();
+print c2();
